@@ -7,17 +7,25 @@
 </head>
 <body>
     <header>
-        <p> フーリエ変換を色々するよ </p>
+        <h1> フーリエ変換を色々するよ </h1>
     </header>
     <section>
         <p> 適当な多項式関数f(x)を用意する</p>
-        <button onclick="GeneratePol(Pol); ShowPol(Pol)">生成</button>
-        <div id="PolRaw"></div>
-        <canvas id="FGraph" width="480" height="480" ></canvas>
+        <button onclick="GeneratePol(Pol); ShowPol(Pol)">生成</button> <br>
+        <!-- <input type="button" value="既存ファイル生成" onclick="playBin(data);" ><br> -->
+        <input type="file" id="targetFile"> 
+        <input type="button" value="読み込みファイル生成" onclick="getBinFile();" > <br>
+        <br>
+        <canvas id="FGraph" width="960" height="480" ></canvas>
+        <div class="drawing"></div>
+        <div class="drawing"></div>
+        <div class="drawing"></div>
     </section>
     <footer>
 
     </footer>
     <script src="./Forier.js"></script>
+    <script src="./FileLoader.js"></script>
+    <script src="./FileReader.js"></script>
     </body>
 </html>
